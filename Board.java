@@ -22,7 +22,11 @@ public class Board {
 
 	public boolean addRandom() {
 		// add one new value in a random, unused space
-		return false;
+		int[] hold = this.getRandomUnusedSpot();
+		int unusedRow = hold[0];
+		int unusedCol = hold[1];
+		this.addRandomValueToSpecificCell(unusedRow, unusedCol);
+		return true;
 	}
 
 	/*
