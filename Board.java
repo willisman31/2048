@@ -15,7 +15,8 @@ public class Board {
 	}
 
 	public void initializeRandomly() {
-		
+		this.addRandom();
+		this.addRandom();
 		// add two new values to random squares on the board
 	}
 
@@ -52,7 +53,7 @@ public class Board {
 	}
 
 	public int[] getRandomUnusedSpot(int side) {
-		//
+		// 
 		return null; 
 	}
 
