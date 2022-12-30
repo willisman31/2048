@@ -21,6 +21,7 @@ public class Board {
 
 	public boolean addRandom() {
 		// add one new value in a random, unused space
+		return false;
 	}
 
 	/*
@@ -36,11 +37,10 @@ public class Board {
 	 * Add a specific value to a specific cell; return false and exit if the cell is already occupied.
 	 */
 	public boolean addSpecificValueToSpecificCell(int row, int col, int val) {
-		if (this.isOccupied(row, col) return false;
-		else {
+		if (!this.isOccupied(row, col)) {
 			this.boardArray[row][col] = val;
 			return true;
-		}
+		} return false;
 	}
 
 	public boolean isOccupied(int row, int col) {
@@ -52,21 +52,34 @@ public class Board {
 	}
 
 	public int[] getRandomUnusedSpot(int side) {
-		// 
+		//
+		return null; 
 	}
 
 	/*
 	 * Calculate a random value either 2, 4, or 8 based on board sum
 	 */
 	public static int calculateValue() {
-		return 0;
+		int max = log2(this.getBoardSum()) / 2 - 2;
+		int val = (int) Math.random() * max + 2;
+		return val;
+	}
+
+	public static int log2(int n) {
+		return (int) Math.log(n) / Math.log(2);
 	}
 
 	/*
 	 * Return the sum of all spaces on the board
 	 */
 	public int getBoardSum() {
-		return 0;
+		int sum = 0;
+		for (int i = 0; i < this.boardArray[].length; i++) {
+			for (int j = 0; j < this.boardArray.length; j++) {
+				sum += this.boardArray[i][j];
+			}
+		}
+		return sum;
 	}
 }
 
