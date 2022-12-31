@@ -56,9 +56,32 @@ public class Board {
 		return this.boardArray[row][col];
 	}
 
-	public int[] getRandomUnusedSpot(int side) {
-		// 
-		return null; 
+	public int[] getRandomUnusedSpot() {
+		// Count unused spots, iterate
+		int[] cells = new boolean[this.boardArray.length**2];
+		int occupiedCount = 0;
+		for (int i = 0; i < this.boardArray.length; i++){
+			for (int j = 0; j < this.boardArray[].length; j++) {
+				if (this.isOccupied(i, j)) {
+					cells[i * boardArray.length + j] = true;
+					occupiedCount++;
+				}
+			}
+		}
+		int space = (int) Math.random() * occupiedCount;
+		int[] spot = new int[2];
+		int row = 0, col = 0, counter = 0;
+		while (counter <= space) {
+			if (counter == space) {
+				row = i % boardArray[].length;
+				col = i / boardArray[].length;
+				spot[0] = row;
+				spot[1] = col;
+			} else {
+				counter++;
+			}
+		}
+		return spot; 
 	}
 
 	/*
