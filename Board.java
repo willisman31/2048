@@ -109,5 +109,10 @@ public class Board {
 		}
 		return sum;
 	}
+
+	public boolean hasPossibleMove() {
+		return false;
+		// TODO
+	}
 }
 
